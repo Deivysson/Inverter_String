@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Invertendo String</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    
+  </head>
+  <body>
+    <h1>Invertendo String</h1>
+    <form>
+      <label for="string">Digite uma string para ser invertida:</label>
+      <input type="text" id="string" name="string">
+      <button type="button" onclick="inverterString()">Inverter</button>
+    </form>
+    <br>
+    <label for="string-invertida">String Invertida:</label>
+    <input type="text" id="string-invertida" readonly>
+    <script>
+      function inverterString() {
+        
+        var string = document.getElementById("string").value;
+
+        
+        var stringInvertida = "";
+
+        
+        for (var i = string.length - 1; i >= 0; i--) {
+          stringInvertida += string[i];
+        }
+
+        
+        document.getElementById("string-invertida").value = stringInvertida;
+      }
+    </script>
+  </body>
+</html>
